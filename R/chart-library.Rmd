@@ -1,0 +1,33 @@
+---
+#YAML header
+title: "My analysis scripts"
+author: "By Erin Caughey"
+date:  "Last updated: `r Sys.Date()`"
+output:
+  html_document: 
+    toc: true  #This establishes a table of contents
+    to_depth: 1  #this indicates there will be just 1 layer
+    toc_float: true  #TOC will float as you scroll down
+    theme: flatly  #theme for page, http://www.datadreaming.org/post/r-markdown-theme-gallery/
+---
+### Libraries
+
+```{r setup, include=FALSE, warning=FALSE, message=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+#this chunk of code comes automatically when you create a new markdown page
+#it's needed for converting this page to HTML
+
+#Load the libraries
+library(tidyverse) #https://www.tidyverse.org/
+library(dplyr) #Used for cleaning data
+library(tidyr)
+library(stringr)
+library(janitor) #Used for cleaning data
+library(rmarkdown) #used for building the HTML page
+library(knitr) #used for building the HTML page
+library(htmltools)
+library(scales)
+library(lubridate)
+library(gghighlight)
+```
